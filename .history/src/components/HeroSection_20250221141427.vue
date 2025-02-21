@@ -4,9 +4,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-logo-content-wrapper">
-                <!-- <div class="hero-logo">
+                <div class="hero-logo">
                     <img src="../assets/ysjx-logo-noword.png" alt="云上江西 logo">
-                </div> -->
+                </div>
                 <div class="hero-text-content">
                     <h2 class="hero-title">云上江西大模型展示</h2>
                     <p class="hero-slogan">数据赋能 创新发展</p>
@@ -97,7 +97,7 @@
 .hero-logo-content-wrapper {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
 }
 
@@ -117,7 +117,7 @@
 
 /* 文本内容样式 */
 .hero-text-content {
-    text-align: center;
+    text-align: left;
 }
 
 .hero-title {

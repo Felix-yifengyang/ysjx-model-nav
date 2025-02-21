@@ -117,7 +117,7 @@
 
 /* 文本内容样式 */
 .hero-text-content {
-    text-align: center;
+    text-align: left;
 }
 
 .hero-title {

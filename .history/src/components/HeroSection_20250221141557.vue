@@ -98,7 +98,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    text-align: left;
+    text-align: center;
 }
 
 /*  logo 样式 */
@@ -117,7 +117,7 @@
 
 /* 文本内容样式 */
 .hero-text-content {
-    text-align: center;
+    text-align: left;
 }
 
 .hero-title {

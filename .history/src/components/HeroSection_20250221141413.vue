@@ -4,9 +4,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-logo-content-wrapper">
-                <!-- <div class="hero-logo">
+                <div class="hero-logo">
                     <img src="../assets/ysjx-logo-noword.png" alt="云上江西 logo">
-                </div> -->
+                </div>
                 <div class="hero-text-content">
                     <h2 class="hero-title">云上江西大模型展示</h2>
                     <p class="hero-slogan">数据赋能 创新发展</p>
@@ -32,18 +32,6 @@
                     <!-- 第三个矩形 -->
                     <a href="http://10.9.55.36:12300/" class="showcase-item item-3">
                         <p class="description">赣企通知识库工具</p>
-                    </a>
-                    <!-- 第四个矩形 -->
-                    <a href="http://106.227.19.14:16104/" class="showcase-item item-4">
-                        <p class="description">大模型通用对话聊天</p>
-                    </a>
-                    <!-- 第五个矩形 -->
-                    <a href="http://106.227.19.2:26011/" class="showcase-item item-5">
-                        <p class="description">大模型党建辅助系统</p>
-                    </a>
-                    <!-- 第六个矩形 -->
-                    <a href="http://106.227.19.14:9999/datamodel/dist/#/login" class="showcase-item item-6">
-                        <p class="description">政务大模型开发底座</p>
                     </a>
                 </div>
             </div>
@@ -96,8 +84,8 @@
 /*  logo 和文本内容包装器 */
 .hero-logo-content-wrapper {
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    align-items: center; /* 垂直居中 */
+    flex-direction: row; /* 修改为行布局 */
     text-align: left;
 }
 
@@ -117,7 +105,7 @@
 
 /* 文本内容样式 */
 .hero-text-content {
-    text-align: center;
+    text-align: left;
 }
 
 .hero-title {
