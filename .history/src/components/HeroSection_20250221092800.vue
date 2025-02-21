@@ -42,8 +42,8 @@
                         <p class="description">大模型党建辅助系统</p>
                     </a>
                     <!-- 第六个矩形 -->
-                    <a href="http://106.227.19.14:9999/datamodel/dist/#/login" class="showcase-item item-6">
-                        <p class="description">政务大模型开发底座</p>
+                    <a href="http://www.baidu.com/" class="showcase-item item-6">
+                        <p class="description">大模型底座</p>
                     </a>
                 </div>
             </div>

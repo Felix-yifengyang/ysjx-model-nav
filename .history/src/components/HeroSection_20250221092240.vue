@@ -41,10 +41,6 @@
                     <a href="http://106.227.19.2:26011/" class="showcase-item item-5">
                         <p class="description">大模型党建辅助系统</p>
                     </a>
-                    <!-- 第六个矩形 -->
-                    <a href="http://106.227.19.14:9999/datamodel/dist/#/login" class="showcase-item item-6">
-                        <p class="description">政务大模型开发底座</p>
-                    </a>
                 </div>
             </div>
         </div>
@@ -283,12 +279,7 @@
 }
 
 .item-5 {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
-
-.item-6 {
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
     grid-row: 3 / 4;
 }
 

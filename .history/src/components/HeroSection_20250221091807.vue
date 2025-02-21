@@ -41,10 +41,6 @@
                     <a href="http://106.227.19.2:26011/" class="showcase-item item-5">
                         <p class="description">大模型党建辅助系统</p>
                     </a>
-                    <!-- 第六个矩形 -->
-                    <a href="http://106.227.19.14:9999/datamodel/dist/#/login" class="showcase-item item-6">
-                        <p class="description">政务大模型开发底座</p>
-                    </a>
                 </div>
             </div>
         </div>
@@ -55,17 +51,16 @@
 </script>
 
 <style scoped>
-/* 整体背景和基础样式 */
 .hero {
     background-image: url('../assets/sample.webp');
     background-size: cover;
     background-position: center;
-    height: 100vh; /* 使用视口高度，适应不同屏幕 */
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* 为遮罩层定位做准备 */
+    overflow: hidden; /* 防止内容溢出 */
 }
 
 /* 半透明遮罩层 */
@@ -75,97 +70,92 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)); /* 渐变遮罩 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
 }
 
-/* 主要内容区域 */
 .hero-content {
     text-align: center;
     color: white;
-    z-index: 1;
-    padding: 0 20px;
+    z-index: 1; /* 确保内容显示在遮罩层之上 */
+    padding: 0 20px; /* 添加左右内边距，防止内容紧贴边缘 */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%; /* 调整宽度 */
-    max-width: 1400px; /* 增加最大宽度 */
+    flex-direction: row; /* 修改为水平排列 */
+    justify-content: space-between; /* 子元素两端对齐 */
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative;
+    position: relative; /* 为 department-info 定位做参考 */
 }
 
-/*  logo 和文本内容包装器 */
 .hero-logo-content-wrapper {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; /* 垂直排列 logo 和文本 */
     text-align: left;
 }
 
-/*  logo 样式 */
 .hero-logo {
-    width: 350px; /* 调整 logo 宽度 */
+    width: 300px; /* 根据实际情况调整 logo 的宽度 */
     height: auto;
-    margin-right: 50px;
-    animation: fadeIn 1s ease, scaleIn 1s ease; /* 增加缩放动画 */
+    margin-right: 40px;
+    animation: fadeIn 1s ease; /* 添加淡入动画 */
 }
 
 .hero-logo img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)); /* 调整投影效果 */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* 添加投影效果 */
 }
 
-/* 文本内容样式 */
 .hero-text-content {
     text-align: left;
 }
 
 .hero-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 64px; /* 增大标题字体 */
-    margin-bottom: 30px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* 增强文字阴影 */
-    animation: fadeInDown 1s ease, slideInLeft 1s ease; /* 增加滑入动画 */
+    font-family: 'Montserrat', sans-serif; /* 使用更美观的字体 */
+    font-size: 56px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影 */
+    animation: fadeInDown 1s ease; /* 添加淡入向下动画 */
 }
 
 .hero-slogan {
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px; /* 增大标语字体 */
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    animation: fadeInUp 1s ease 0.3s, slideInLeft 1s ease 0.3s; /* 增加滑入动画 */
-    opacity: 0;
-    animation-fill-mode: forwards;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease 0.3s; /* 添加淡入向上动画，延迟 0.3 秒 */
+    opacity: 0; /* 初始透明度为 0 */
+    animation-fill-mode: forwards; /* 动画结束后保持最终状态 */
 }
 
 .hero-features {
     font-family: 'Open Sans', sans-serif;
-    font-size: 22px; /* 增大功能描述字体 */
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    animation: fadeInUp 1s ease 0.6s, slideInLeft 1s ease 0.6s; /* 增加滑入动画 */
-    opacity: 0;
-    animation-fill-mode: forwards;
+    font-size: 18px;
+    margin-bottom: 20px; /* 减少底部边距，为部门信息留出空间 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease 0.6s; /* 添加淡入向上动画，延迟 0.6 秒 */
+    opacity: 0; /* 初始透明度为 0 */
+    animation-fill-mode: forwards; /* 动画结束后保持最终状态 */
 }
 
-/* 部门信息样式 */
 .department-info {
     display: flex;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px; /* 增大部门信息字体 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    animation: fadeInUp 1s ease 0.9s, slideInRight 1s ease 0.9s; /* 增加滑入动画 */
-    opacity: 0;
-    animation-fill-mode: forwards;
-    position: absolute;
-    right: 300px; /* 调整位置 */
-    bottom: -40px;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease 0.9s; /* 添加淡入向上动画，延迟 0.9 秒 */
+    opacity: 0; /* 初始透明度为 0 */
+    animation-fill-mode: forwards; /* 动画结束后保持最终状态 */
+    position: absolute; /* 绝对定位 */
+    right: 250px; /* 距离右侧 20px */
+    bottom: -30px; /* 距离底部 20px，可根据需要调整 */
 }
 
 .department-label {
-    margin-right: 10px;
-    color: #ccc;
+    margin-right: 5px;
+    color: #ccc; /* 标签颜色稍浅 */
 }
 
 .department-name {
@@ -173,33 +163,67 @@
     font-weight: bold;
 }
 
-/* 展示区域样式 */
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 淡入向下动画 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 淡入向上动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ShowcaseSection 样式 */
 .showcase-section {
-    width: 50%;
-    padding: 30px; /* 增加内边距 */
-    background-color: rgba(255, 255, 255, 0.9); /* 增加背景透明度 */
-    border-radius: 20px; /* 增大圆角 */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* 增强阴影 */
+    width: 50%; /* 占据一半宽度 */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .showcase-section h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 42px; /* 增大标题字体 */
+    font-size: 36px;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     position: relative;
 }
 
 .showcase-section h2::after {
     content: '';
     position: absolute;
-    bottom: -15px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px; /* 增加下划线宽度 */
-    height: 4px; /* 增加下划线高度 */
+    width: 60px;
+    height: 3px;
     background-color: #007BFF;
 }
 
@@ -207,14 +231,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 20px; /* 增大间距 */
+    gap: 15px;
     justify-content: center;
 }
 
 .showcase-item {
     background-color: #ffffff;
-    border-radius: 20px; /* 增大圆角 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* 增强阴影 */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -223,15 +247,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, #f9f9f9, #ffffff);
-    border: 2px solid #e0e0e0; /* 增加边框宽度 */
+    background-image: linear-gradient(to bottom, #f9f9f9, #ffffff); /* 添加渐变背景 */
+    border: 1px solid #e0e0e0; /* 添加边框 */
 }
 
 .showcase-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to bottom, #ffffff, #f9f9f9);
-    border-color: #a0a0a0;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(to bottom, #ffffff, #f9f9f9); /* 悬停时渐变背景反转 */
+    border-color: #a0a0a0; /* 悬停时边框颜色变深 */
 }
 
 .showcase-item::before {
@@ -241,7 +265,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.05);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -251,15 +275,15 @@
 }
 
 .description {
-    padding: 20px; /* 增加内边距 */
-    font-size: 20px; /* 增大字体 */
-    color: #333333;
+    padding: 15px;
+    font-size: 18px; /* 增大字体大小 */
+    color: #333333; /* 加深文字颜色 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     z-index: 1;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* 增强文字阴影 */
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.4; /* 调整行高 */
 }
 
 .item-1 {
@@ -283,71 +307,7 @@
 }
 
 .item-5 {
-    grid-column: 1 / 2;
+    grid-column: 1 / 3;
     grid-row: 3 / 4;
-}
-
-.item-6 {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-}
-
-/* 动画定义 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        transform: scale(0.8);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-80px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(80px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100px);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100px);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
 </style>

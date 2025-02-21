@@ -1,6 +1,7 @@
 <template>
   <div id="home">
     <HeroSection />
+    <ShowcaseSection />
     <FeatureSelection />
     <Footer />
   </div>
@@ -8,6 +9,7 @@
 
 <script setup>
 import HeroSection from './components/HeroSection.vue'
+import ShowcaseSection from './components/ShowcaseSection.vue'
 import FeatureSelection from './components/FeatureSelection.vue'
 import Footer from './components/Footer.vue'
 </script>
